@@ -4,7 +4,7 @@ from PIL import Image
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing import image
 
-model = load_model('/mount/src/cpe019_final_-exam/NasNet_model.h5')
+model = load_model('NasNet_model.h5')
 
 class_names = ['cloudy', 'rain', 'shine', 'sunrise']
 
