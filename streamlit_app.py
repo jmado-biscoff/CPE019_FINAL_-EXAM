@@ -13,7 +13,7 @@ st.title("Weather Image Classifier (NASNet)")
 uploaded_file = st.file_uploader("Upload a weather image", type=["jpg", "jpeg", "png"])
 
 if uploaded_file is not None:
-    img = Image.open(uploaded_file).resize((150, 150))
+    img = Image.open(uploaded_file).resize((224, 224))
     st.image(img, caption='Uploaded Image', use_container_width=True)
 
     img_array = image.img_to_array(img)
