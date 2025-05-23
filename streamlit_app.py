@@ -7,7 +7,8 @@ from tensorflow.keras.layers import Dense, GlobalAveragePooling2D, Dropout
 from tensorflow.keras.optimizers import Adam
 
 # Rebuild model architecture
-base_model = NASNetMobile(weights=None, include_top=False, input_shape=(150, 150, 3))
+base_model = NASNetMobile(weights='imagenet', include_top=False, input_shape=(150, 150, 3))
+base_model.trainable=false
 x = base_model.output
 x = GlobalAveragePooling2D()(x)
 x = Dropout(0.3)(x)
