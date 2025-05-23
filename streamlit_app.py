@@ -16,7 +16,7 @@ x = Dropout(0.3)(x)
 predictions = Dense(4, activation='softmax')(x)
 model = Model(inputs=base_model.input, outputs=predictions)
 
-model.load_weights('nasnet_weights.h5')
+model.load_weights('nasnet_model.weights.h5')
 model.compile(optimizer=Adam(learning_rate=0.0001),
               loss='sparse_categorical_crossentropy',
               metrics=['accuracy'])
